@@ -19,7 +19,7 @@ const ViewPartialDetials = ({ propDetails, setIsModalOpen}) => {
           initial={{y: 100, opacity: 0.3}}
           whileInView={{y: 0, opacity: 1}}
           transition={{duration: 0.3}}
-          className='w-full h-[620px] bottom-0 left-0 flex flex-col justify-between bg-white px-2 py-8 sm:px-11 md:px-20'
+          className='w-full  h-[620px] bottom-0 left-0 flex flex-col justify-between bg-white px-2 py-8 sm:px-11 md:px-20'
         >
           <div className='lg:flex'>
             <div className='relative'>
