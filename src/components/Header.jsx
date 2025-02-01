@@ -60,8 +60,8 @@ const Header = () => {
     <nav className='fixed top-0 z-50 w-full flex justify-between items-center py-3 md:px-16 lg:px-28 bg-white border-b-[0.3px] border-slate-300'>
       <div onClick={() => navigate('/')} className='cursor-pointer'>
         <img 
-          className='size-14'
-          src="https://png.pngtree.com/template/20190217/ourmid/pngtree-real-estate-logohome-logohouse-logosimple-design-image_56618.jpg" alt="real-state-logo"
+          className='w-24 h-12 pl-3'
+          src={xtateLogoBlack} alt="real-state-logo"
         />
       </div>
       <div className='hidden md:block'>
