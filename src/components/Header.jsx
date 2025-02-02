@@ -21,11 +21,6 @@ import { BsBuildings, BsBriefcase, BsPhone, BsEnvelope } from 'react-icons/bs';
 
 const Header = () => {
   const navigate = useNavigate();
-  const [open, setOpen] = React.useState(false);
-
-  const toggleDrawer = (newOpen) => () => {
-    setOpen(newOpen);
-  };
 
   const goToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -33,7 +28,6 @@ const Header = () => {
       section.scrollIntoView({ behavior: 'smooth' });
     }
   };
-  
 
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
