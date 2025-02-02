@@ -20,6 +20,7 @@ import { IoMenu } from "react-icons/io5";
 import { BsBuildings, BsBriefcase, BsPhone, BsEnvelope } from 'react-icons/bs';
 
 const Header = () => {
+  const [toggleDrawer, setToggleDrawer] = useState(false);
   const navigate = useNavigate();
 
   const goToSection = (sectionId) => {
@@ -30,7 +31,7 @@ const Header = () => {
   };
 
   const DrawerList = (
-    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+    <Box sx={{ width: 250 }} role="presentation" onClick={() => setToggleDrawer(false)}>
       <List>
         {['Property', 'Services', 'Agent', 'Contact Us'].map((text, index) => (
           <ListItem key={text}>
@@ -54,7 +55,7 @@ const Header = () => {
     <nav className='fixed top-0 z-50 w-full flex justify-between items-center py-3 md:px-16 lg:px-28 bg-white border-b-[0.3px] border-slate-300'>
       <div onClick={() => navigate('/')} className='cursor-pointer'>
         <img 
-          className='w-24 h-12 pl-3'
+          className='w-32 h-16 pl-3'
           src={xtateLogoBlack} alt="real-state-logo"
         />
       </div>
@@ -69,15 +70,15 @@ const Header = () => {
       
       <div className='md:hidden'>
         <Button
-          onClick={toggleDrawer(true)}
+          onClick={() => setToggleDrawer(true)}
         >
           <IoMenu className='size-10 text-black'/>
         </Button>
       </div>
       
-      <Drawer open={open} onClose={toggleDrawer(false)}>
+      <Drawer open={toggleDrawer} onClose={() => setToggleDrawer(false)}>
         <div>
-          <img src={xtateLogoBlack} alt="xtateLogoBlack" className='w-28 p-4'/>
+          <img src={xtateLogoBlack} alt="xtateLogoBlack" className='w-32 h-12 mx-8 m-4'/>
           <Divider />
         </div>
         {DrawerList}

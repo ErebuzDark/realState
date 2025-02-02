@@ -27,13 +27,16 @@ const Search = () => {
   return (
 
     <main>
-      <div className='pb-8'>
+      <div className='flex flex-col md:flex-row  md:items-center gap-3 pb-8'>
         <h1 className='text-lg text-slate-400 p-1 font-light'>Search results for:</h1>
-        <span className='text-sm text-slate-800 bg-slate-100 rounded-full border-[0.3px] p-2 mr-1'>Apartment</span>
-        <span className='text-sm text-slate-800 bg-slate-100 rounded-full border-[0.3px] p-2 mr-1'>California</span>
-        <span className='text-sm text-slate-800 bg-slate-100 rounded-full border-[0.3px] p-2 mr-1'>1000 sq.ft.</span>
+        <div className='flex flex-wrap'>
+          <span className='text-sm text-slate-800 bg-slate-100 rounded-full border-[0.3px] p-2 mr-1'>Apartment</span>
+          <span className='text-sm text-slate-800 bg-slate-100 rounded-full border-[0.3px] p-2 mr-1'>California</span>
+          <span className='text-sm text-slate-800 bg-slate-100 rounded-full border-[0.3px] p-2 mr-1'>1000 sq.ft.</span>
+        </div>
+       
       </div>
-      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 gap-y-5'>
+      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 gap-y-14'>
         {resultsDummyData.map((property) => 
           <div 
             onClick={() => openBottomModal(property.id)}
@@ -50,7 +53,7 @@ const Search = () => {
             ><div className='size-full hover:backdrop-blur-xs duration-300'></div>
             </div>
             <div className='bg-[#343434] text-white p-2'>
-              <h1 className='font-semibold'>{property.propName}</h1>
+              <h1 className='text-2xl font-semibold'>{property.propName}</h1>
               <p className='text-sm font-thin'>{property.size}</p>
             </div>
           </div>
