@@ -57,7 +57,7 @@ const LandingPage = () => {
           className='flex flex-col w-full justify-center items-center'
         >
           <img src={xtateLogoWhite} alt="xtateLogoWhite" className='w-28 md:w-40 lg:w-64 lg:h-28'/>
-          <h1 className='text-white text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:6xl'>Your Trusted Path to Property</h1>
+          <h1 className='text-white text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:6xl'>Your Trusted Path to Property?</h1>
         </motion.div>
         <div className='w-full text-sm px-3 lg:px-32 py-12'>
           <form className='w-full flex item-center justify-center bg-white p-3 rounded-full'>
